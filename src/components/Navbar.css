@@ -1,0 +1,141 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #01183a;
+  position: relative;
+  font-family: sans-serif;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-logo span {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+/* Links Styling */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Buttons Styling */
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-buttons .btn {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-buttons .btn-login {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-buttons .btn-signup {
+  background-color: #1d1d1d;
+  color: white;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-buttons .btn-login:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.navbar-buttons .btn-signup:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Hamburger Menu (hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Stacking the elements vertically */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  /* Hide navbar links and buttons by default */
+  .navbar-links,
+  .navbar-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Display hamburger menu */
+  .hamburger {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  /* When the menu is active (hamburger clicked), show the links/buttons */
+  .navbar-links.active,
+  .navbar-buttons.active {
+    display: flex;
+  }
+
+  .navbar-links a,
+  .navbar-buttons .btn {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
+}

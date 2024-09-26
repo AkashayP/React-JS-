@@ -1,0 +1,163 @@
+/* Main container for the login page */
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&display=swap');
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0px 0px 0px;
+  gap: 36px;
+  width: 100%;
+  max-width: auto;
+  margin: 0 auto;
+  opacity: 1;
+  background-color: #000814;
+  height: 100vh;
+}
+
+/* Left Column - Login Form */
+.login-left {
+  width: 508px;
+  height: 562px;
+  padding: 32px;
+  background-color: #000814;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 140px; /* Add margin from the left for larger screens */
+  margin-top: 40px;
+  /* border: 1px solid #ccc; */
+  
+}
+
+.login-left h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.login-left p {
+  font-size: 16px;
+  color: white;
+  font-family: sans-serif;
+}
+span{
+  font-family: "Edu SA Beginner", cursive;
+  color: #125cab;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px;
+  margin: 25px 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #000814;
+}
+
+.forgot-password {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  width: 107%;
+  padding: 15px;
+  background-color: yellow;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .login-btn:hover {
+  background-color: #45a049;
+} */
+
+/* Right Column - Overlapping Images */
+.login-right {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-right: 140px;
+  margin-bottom: 170px;
+  
+}
+
+.image {
+  position: absolute;
+  bottom: 0;
+}
+
+.image1 {
+  width: 60%;
+  right: 20px;
+  bottom: 80px;
+  z-index: 1;
+}
+
+.image2 {
+  width: 60%;
+  right: 7px;
+  bottom: 70px;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+    padding-top: 220px; 
+  }
+
+  .login-left {
+    width: 80%;
+    height: auto;
+    margin-left: 0px; 
+    
+  }
+
+  /* Images stack on top of each other, but maintain overlap */
+  .login-right {
+    padding-top: 120px;
+    position: relative;
+    height: 200px; /* Ensure there’s space for both images to overlap */
+    width: 50%; 
+    gap: 10px; 
+    margin-bottom: 20px;
+
+  }
+
+  .image1, .image2 {
+    position: absolute;
+    width: 80%; /* Keep images proportional */
+    max-width: 300px; /* Prevent images from growing too large */
+    max-height: 300px;
+    
+  }
+
+  .image1 {
+    bottom: 50px;
+    left: 30px; /* Adjust the left position to ensure overlap */
+    z-index: 2;
+  }
+
+  .image2 {
+    bottom: 30px;
+    left: 50px; /* Ensure it overlaps with image1 */
+    z-index: 1;
+  }
+}
