@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css';
-import VideoFrame1 from '../assets/VideoFrame1.mp4';
+import webVideo from '../assets/webVideo.mp4';
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
@@ -19,7 +19,7 @@ const HomePage = () => {
 
       <div className="video-container">
         <video autoPlay width="100%" className="video-player">
-          <source src={VideoFrame1} type="video/mp4" />
+          <source src={webVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
