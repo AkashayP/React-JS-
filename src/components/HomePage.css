@@ -48,6 +48,13 @@
     border-radius: 50px;
     border-bottom: 2px solid rgb(49, 48, 48) ;
     font-weight: bold;
+    
+  }
+
+  .shrink-button1 link{
+    text-decoration: none;
+    color: rgb(174, 171, 171);
+
   }
   
   /* Button styles with hover shrink effect */
