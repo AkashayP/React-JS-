@@ -6,38 +6,35 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Toggle the hamburger menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <nav className="navbar">
-      {/* Logo and Brand Name */}
       <div className="navbar-logo">
         <img src={Subtract} alt="Logo" className="logo" />
         <span>StudyNotion</span>
       </div>
 
-      {/* Hamburger Menu (shown on smaller screens) */}
       <div className="hamburger" onClick={toggleMenu}>
         <div></div>
         <div></div>
         <div></div>
       </div>
 
-      {/* Links Section */}
+      
       <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
-      <Link style={{textDecoration:"none"}} to="/home">Home</Link>
-        <a style={{color:"yellow"}} href="/catalog">Catalog</a>
-        <a href="/about-us">About Us</a>
-        <a href="/contact">Contact Us</a>
+        <Link className='home' to="/home">Home</Link>
+        <Link className='catalog' to="/catalog">Catalog</Link>
+        <Link className='about' to="/about-us">About Us</Link>
+        <Link className='contact' to="/contact">Contact Us</Link>
       </div>
 
       {/* Login & Signup Buttons */}
       <div className={`navbar-buttons ${isOpen ? 'active' : ''}`}>
-        <button className="btn btn-login"><Link style={{textDecoration:"none"}} to="/">Log In</Link></button>
-        <button className="btn btn-signup"><Link style={{textDecoration:"none"}} to="/signup">Sign Up</Link></button>
+        <button className="btn"><Link className='login' to="/">Log in</Link></button>
+        <button className="btn"><Link className='login' to="/signup">Sign up</Link></button>
       </div>
     
     </nav>

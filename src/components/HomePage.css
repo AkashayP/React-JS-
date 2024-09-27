@@ -51,11 +51,14 @@
     
   }
 
-  .shrink-button1 link{
+  .shrink-button1 .link{
     text-decoration: none;
     color: rgb(174, 171, 171);
 
   }
+  /* .link{
+    text-decoration: none;
+  } */
   
   /* Button styles with hover shrink effect */
   .shrink-button {

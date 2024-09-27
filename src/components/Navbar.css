@@ -1,11 +1,15 @@
-/* General Navbar Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
 .navbar {
+  max-width: 1440px;
+  height: 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #01183a;
-  position: relative;
+  padding: 12px 120px;
+  border-bottom: 1px solid #2C333F;
+  gap: 32px;
+  background-color: #161D29;
   font-family: sans-serif;
 }
 
@@ -13,43 +17,86 @@
 .navbar-logo {
   display: flex;
   align-items: center;
+  width: 160px;
+  height: 32px;
+  
+
 }
 
 .navbar-logo img {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
+  color: #F9F9F9;
   margin-right: 10px;
 }
 
 .navbar-logo span {
-  color: #fff;
+  color: #F9F9F9;
+  width: 121.11px;
+  height: 22px;
+  top: 6.4px;
+  left: 38.4px;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: bold; 
   font-family: sans-serif;
 }
 
-/* Links Styling */
 .navbar-links {
   display: flex;
   gap: 20px;
+  width: fill 816px;
+  height: 32px;
+  font-weight: 400;
+  font-size: 16px;
+  align-content: center;
+  font-family: 'Inter';
+  line-height: 24px;
 }
 
-.navbar-links a {
-  color: white;
+.home{
   text-decoration: none;
-  padding: 8px 12px;
-  transition: background-color 0.3s ease;
+  color: #DBDDEA;
+  width: 69px;
+  height: 32px;
+  padding: 4px 12px;
+  gap: 4px;
 }
-
-.btn .btn-login link {
+.catalog{
   text-decoration: none;
-  color: white;
+  color: #FFD60A;
+  width: 103px;
+  height: 32px;
+  padding: 4px 12px;
+  gap: 4px;
 }
 
-.navbar-links a:hover {
-  background-color: #555;
-  border-radius: 5px;
+.about{
+  text-decoration: none;
+  color: #DBDDEA;
+  width: 92px;
+  height: 32px;
+  padding: 4px 12px;
+  gap: 4px;
 }
+
+.contact{
+  text-decoration: none;
+  color: #DBDDEA;
+  width: 92px;
+  height: 32px;
+  padding: 4px 12px;
+  gap: 4px;
+}
+.about{
+  text-decoration: none;
+  color: #F9F9F9;
+  width: 107px;
+  height: 32px;
+  padding: 4px 12px;
+  gap: 4px;
+}
+
+
 
 /* Buttons Styling */
 .navbar-buttons {
@@ -58,54 +105,61 @@
 }
 
 .navbar-buttons .btn {
-  padding: 8px 16px;
+  padding: 5px 12px;
+  gap: 8px;
   font-size: 1rem;
-  border: none;
+  background-color: #161D29;
+  border: 1px solid #2C333F;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  min-width: 78px;
+  height: 40px;
+}
+
+.login{
   text-decoration: none;
-  color: inherit;
+  width: 68px;
+  height: 24px;
+  font-family: 'Inter';
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  align-content: center;
+  color: #AFB2BF;
+  ;
 }
 
-.navbar-buttons .btn-login {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar-buttons .btn-signup {
-  background-color: #1d1d1d;
-  color: white;
-  border: 1px solid #fff;
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar-buttons .btn-login:hover {
-  background-color: #fff;
-  color: #333;
-}
-
-.navbar-buttons .btn-signup:hover {
-  background-color: #fff;
-  color: #333;
-}
 
 /* Hamburger Menu (hidden by default) */
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
+  width: 30px;
+  height: 25px;
+  
 }
 
 .hamburger div {
-  width: 25px;
-  height: 3px;
+  width: 100%;
+  height: 4px;
   background-color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
   margin: 4px;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Responsive Styles */
@@ -128,7 +182,7 @@
   /* Display hamburger menu */
   .hamburger {
     display: flex;
-    align-self: flex-end;
+    align-self: flex-end; 
   }
 
   /* When the menu is active (hamburger clicked), show the links/buttons */

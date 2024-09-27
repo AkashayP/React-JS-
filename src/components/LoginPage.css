@@ -1,4 +1,4 @@
-/* Main container for the login page */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&display=swap');
 
 .login-container {
@@ -7,60 +7,86 @@
   padding: 32px 0px 0px 0px;
   gap: 36px;
   width: 100%;
-  max-width: auto;
+  max-width: 1440px;
   margin: 0 auto;
   opacity: 1;
   background-color: #000814;
-  height: 100vh;
+  height: auto;
 }
 
 /* Left Column - Login Form */
 .login-left {
-  width: 508px;
-  height: 562px;
+  max-width: 508px;
+  height: 728px;
   padding: 32px;
   background-color: #000814;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-left: 140px; /* Add margin from the left for larger screens */
-  margin-top: 40px;
-  /* border: 1px solid #ccc; */
-  
+  position: relative;
+  gap: 36px;
+  left: 120px;
+  top: 17px;
 }
-
-.login-left h2 {
-  font-size: 24px;
+.content{
+  width: 444px;
+  height: 100px;
+  gap: 12px;
+}
+.login-left .content h2 {
+  font-size: 30px;
   margin-bottom: 10px;
-  color: white;
-  font-family: sans-serif;
+  color:  #F1F2FF;
+  font-family: 'Inter';
+  font-weight: 600;
+  line-height: 38px;
 }
 
-.login-left p {
-  font-size: 16px;
-  color: white;
-  font-family: sans-serif;
+.login-left .content p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #AFB2BF;
+  font-family: 'Inter';
+  line-height: 26px;
 }
 span{
   font-family: "Edu SA Beginner", cursive;
-  color: #125cab;
+  color: #47A5C5;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
 }
 
+.form{
+  max-width: 444px;
+  height: 198px;
+  gap: 20px;
+}
+.upperText{
+  
+  font-size: 14px;
+  font-weight: 400;
+  color: #F1F2FF;
+  font-family: 'Inter';
+  line-height: 22px;
+  margin-bottom: 10px;
+  max-width: 444px;
+  height: 22px;
+}
 .input-field {
   width: 100%;
-  padding: 15px;
-  margin: 25px 0;
-  border-bottom: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #000814;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #161D29;
+  margin-bottom: 10px;
+  ;
 }
 
 .forgot-password {
   background: none;
   border: none;
-  color: #007bff;
-  text-align: left;
+  color: #47A5C5;
+  align-items: flex-end;
   cursor: pointer;
   margin-bottom: 20px;
 }
@@ -68,7 +94,7 @@ span{
 .login-btn {
   width: 107%;
   padding: 15px;
-  background-color: yellow;
+  background-color: #FFD60A;
   color: black;
   border: none;
   border-radius: 5px;
@@ -78,11 +104,6 @@ span{
   align-items: center;
 }
 
-/* .login-btn:hover {
-  background-color: #45a049;
-} */
-
-/* Right Column - Overlapping Images */
 .login-right {
   position: relative;
   width: 50%;
@@ -114,7 +135,6 @@ span{
   opacity: 0.9;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .login-container {
     flex-direction: column-reverse;
@@ -130,11 +150,11 @@ span{
     
   }
 
-  /* Images stack on top of each other, but maintain overlap */
+ 
   .login-right {
     padding-top: 120px;
     position: relative;
-    height: 200px; /* Ensure there’s space for both images to overlap */
+    height: 200px;
     width: 50%; 
     gap: 10px; 
     margin-bottom: 20px;
@@ -143,8 +163,8 @@ span{
 
   .image1, .image2 {
     position: absolute;
-    width: 80%; /* Keep images proportional */
-    max-width: 300px; /* Prevent images from growing too large */
+    width: 80%; 
+    max-width: 300px; 
     max-height: 300px;
     
   }
