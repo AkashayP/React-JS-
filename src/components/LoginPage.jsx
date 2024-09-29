@@ -10,7 +10,7 @@ const LoginPage = () => {
       <div className="login-left">
         <div className='content'>
         <h2>Welcome Back!</h2>
-        <p>Discover your passions,<br /><span>Be Unstopabble</span></p>
+        <p>Build skills for today, tomorrow, and beyond.,<span>Education to future-proof your career.</span></p>
         </div>
         <form className='form'>
           <p className='upperText'>Email Address</p>

@@ -28,7 +28,7 @@ const Navbar = () => {
         <Link className='home' to="/home">Home</Link>
         <Link className='catalog' to="/catalog">Catalog</Link>
         <Link className='about' to="/about-us">About Us</Link>
-        <Link className='contact' to="/contact">Contact Us</Link>
+        <Link className='contact' to="/contact">ContactUs</Link>
       </div>
 
       {/* Login & Signup Buttons */}
