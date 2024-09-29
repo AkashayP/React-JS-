@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
   return (
     <div className="home-container">
+      <div className='upper-section'>
          <button className="shrink-button1"><Link className='link' style={{textDecoration:"none"}} to="/signup">Become an Instructor</Link></button>
       <h1>Empower Your Future with Coding Skills</h1>
       <p>With our online coding courses, you can learn at your own pace, from anywhere in the world, and get access to a wealth of resources, including hands-on projects, quizzes, and personalized feedback from instructors.</p>
       
-     
+      </div>
 
       <div className="button-group">
         <button className="shrink-button"><Link style={{textDecoration:"none"}} to="/signup">Learn More</Link></button>
