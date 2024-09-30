@@ -3,8 +3,9 @@
 
 .login-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 32px 0px 0px 0px;
+  padding-top: 32px;
   gap: 36px;
   width: 100%;
   max-width: auto;
@@ -14,7 +15,7 @@
   height: auto;
 }
 
-/* Left Column - Login Form */
+
 .login-left {
   max-width: 508px;
   height: 728px;
@@ -78,12 +79,13 @@ span{
   width: 100%;
   max-width: fill 444px ;
   height: 44px;
-  gap: 12px;
   padding: 12px;
   border-radius: 8px;
   background-color: #161D29;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: white;
+  box-shadow: -0.5px -1.5px 0px 0px #0000001F inset;
+
 }
 
 .forgot-password {
@@ -98,11 +100,12 @@ span{
 .login-btn {
   width: 100%;
   padding: 15px;
+  margin-top: 12px;
   background-color: #FFD60A;
   color: black;
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid #ccc;
+  box-shadow: -0.5px -1.5px 0px 0px #0000001F inset;
   font-weight: 600;
 }
 
@@ -122,7 +125,7 @@ span{
 
 .image {
   position: absolute;
-  width: 370px;
+  width: 300px;
   height: auto;
 }
 .image1 {
@@ -130,6 +133,7 @@ span{
   right: 264px;
   bottom: 80px;
   z-index: 1;
+  top: 65px;
   margin-bottom: 197px;
 }
 
@@ -140,7 +144,7 @@ span{
   left: 27px;
   z-index: 0;
   background-color: #161D29;
-  /* opacity: 0.9; */
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
