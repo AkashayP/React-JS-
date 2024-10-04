@@ -1,26 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 .navbar {
-  max-width: 1600px;
+  width: 100%;
   height: 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 120px;
+  padding: 12px 5%;
   border-bottom: 1px solid #2C333F;
   gap: 32px;
   background-color: #161D29;
   font-family: sans-serif;
 }
 
-/* Logo Styling */
 .navbar-logo {
   display: flex;
   align-items: center;
-  width: 160px;
-  height: 32px;
-  
-
+  width: auto;
 }
 
 .navbar-logo img {
@@ -82,7 +78,7 @@
 .contact{
   text-decoration: none;
   color: #DBDDEA;
-  width: 94px;
+  width: 96px;
   height: 32px;
   padding: 4px 12px;
   gap: 4px;
@@ -159,30 +155,23 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
-  /* Stacking the elements vertically */
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
   }
 
-  /* Hide navbar links and buttons by default */
   .navbar-links,
   .navbar-buttons {
     display: none;
     flex-direction: column;
     width: 100%;
   }
-
-  /* Display hamburger menu */
   .hamburger {
     display: flex;
     align-self: flex-end; 
   }
-
-  /* When the menu is active (hamburger clicked), show the links/buttons */
   .navbar-links.active,
   .navbar-buttons.active {
     display: flex;
@@ -193,5 +182,10 @@
     padding: 10px;
     width: 100%;
     text-align: left;
+
+  .home,.catalog,.about,.contact {
+      padding: 10px 15px;
+      font-size: 16px;
+    }
   }
 }

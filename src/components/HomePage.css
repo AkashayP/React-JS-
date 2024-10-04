@@ -32,13 +32,12 @@ body, html {
     font-size: 18px;
     margin-bottom: 20px;
     color: rgb(174, 171, 171);
-    font-weight: 700;
+    font-weight: 500;
     
   }
 
   .shrink-button1 {
     background-color: #001027;
-    color: rgb(174, 171, 171);
     border: none;
     padding: 15px 30px;
     font-size: 16px;
@@ -46,27 +45,34 @@ body, html {
     transition: all 0.3s ease;
     margin: 50px;
     border-radius: 50px;
-    border-bottom: 2px solid rgb(49, 48, 48) ;
+    box-shadow: 0px -1px 0px 0px #FFFFFF2E inset;
     font-weight: bold;
     
   }
 
   .shrink-button1 .link{
     text-decoration: none;
-    color: rgb(174, 171, 171);
+    color: #999DAA;
   }
 
   .shrink-button {
-    background-color: yellow;
+    background-color: #FFD60A;
     color: black;
     border: none;
     padding: 15px 30px;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: -2px -2px 0px 0px #FFFFFF82 inset;
     margin: 10px;
     border-radius: 10px;
     font-weight: 600;
+    color: #000814;
+  }
+
+  .shrink-button .link{
+    text-decoration: none;
+    color: #000814;
   }
 
   .shrink-button2 {
@@ -79,9 +85,14 @@ body, html {
     transition: all 0.3s ease;
     margin: 10px;
     border-radius: 10px;
-    border-bottom: 2px solid rgb(49, 48, 48) ;
-    border-right: 2px solid rgb(49, 48, 48) ;
+    box-shadow: -2px -2px 0px 0px #FFFFFF2E inset;
+
     font-weight: 600;
+    color: white;
+  }
+  .shrink-button2 .link{
+    text-decoration: none;
+    color: white;
   }
   
   .shrink-button:hover {
@@ -103,12 +114,24 @@ body, html {
   
   .video-container {
     margin-top: 60px;
-    width: 80%;
+    width: 1035px;
+    height: 515px;
   }
   
   .video-player {
     border-radius: 2px;
     max-width: 100%;
+    z-index: 2;
+  }
+
+  .bg-image{
+    width: 1440px;
+    height: 881px;
+    opacity: 20%;
+    /* mix-blend-mode: soft-light;
+    background-color: antiquewhite; */
+    z-index: -1;
+
   }
   
   
@@ -120,11 +143,12 @@ body, html {
     p {
       font-size: 16px;
     }
+
   
     .button-group {
         flex-direction: row; 
         justify-content: space-between;
-        /* width: 100%; */
+        width: 100%;
     }
     .shrink-button:hover {
         transform: scale(0.9); 
